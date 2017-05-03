@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the TeamHome page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { Standings, TeamDetail } from '../pages'
+
 @IonicPage()
 @Component({
   selector: 'page-team-home',
@@ -14,7 +10,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TeamHome {
 
+  team: any;
+
+  teamDetailTab = TeamDetail;
+  standingsTab = Standings;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.team = this.navParams.data;
   }
 
   ionViewDidLoad() {

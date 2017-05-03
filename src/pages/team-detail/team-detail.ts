@@ -12,7 +12,7 @@ export class TeamDetail {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.team = this.navParams.data;
-    console.log("** navParams: " + this.navParams.data);
+    console.log("** navParams: ", this.navParams);
   }
 
   ionViewDidLoad() {

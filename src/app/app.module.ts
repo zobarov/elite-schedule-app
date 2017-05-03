@@ -11,6 +11,9 @@ import { Tournaments } from '../pages/tournaments/tournaments';
 import { TeamDetail } from '../pages/team-detail/team-detail';
 import { Teams } from '../pages/teams/teams';
 import { Game } from '../pages/game/game';
+import { TeamHome } from '../pages/team-home/team-home';
+import { Standings } from '../pages/standings/standings';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +27,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tournaments,
     TeamDetail,
     Teams,
-    Game
+    Game,
+    TeamHome,
+    Standings
 
   ],
   imports: [
@@ -40,7 +45,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Tournaments,
     TeamDetail,
     Teams,
-    Game
+    Game,
+    TeamHome,
+    Standings
   ],
   providers: [
     StatusBar,
