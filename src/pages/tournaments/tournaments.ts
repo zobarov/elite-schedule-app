@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the Tournaments page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { MyTeams, Teams} from '../pages'
+
+
 @IonicPage()
 @Component({
   selector: 'page-tournaments',
@@ -14,11 +11,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Tournaments {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tournaments');
+  }
+
+  itemTapped() {
+    this.navCtrl.push(Teams);
   }
 
 }

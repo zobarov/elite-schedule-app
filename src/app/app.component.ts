@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { MyTeams } from '../pages/my-teams/my-teams'
+import { Tournaments } from '../pages/pages'
 
 @Component({
   templateUrl: 'app.html'
@@ -42,5 +43,13 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  goHome() {
+    this.nav.push(MyTeams);
+  }
+
+  goToTournaments() {
+    this.nav.push(Tournaments);
   }
 }

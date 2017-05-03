@@ -7,6 +7,10 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { MyTeams } from '../pages/my-teams/my-teams';
+import { Tournaments } from '../pages/tournaments/tournaments';
+import { TeamDetail } from '../pages/team-detail/team-detail';
+import { Teams } from '../pages/teams/teams';
+import { Game } from '../pages/game/game';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +20,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    MyTeams
+    MyTeams,
+    Tournaments,
+    TeamDetail,
+    Teams,
+    Game
 
   ],
   imports: [
@@ -28,7 +36,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    MyTeams
+    MyTeams,
+    Tournaments,
+    TeamDetail,
+    Teams,
+    Game
   ],
   providers: [
     StatusBar,
