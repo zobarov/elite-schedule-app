@@ -6,8 +6,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
-import { MyTeams } from '../pages/my-teams/my-teams'
-import { Tournaments } from '../pages/pages'
+import { MyTeams } from '../pages/my-teams/my-teams';
+import { Tournaments } from '../pages/pages';
+
+import { EliteApi } from '../shared/shared';
 
 @Component({
   templateUrl: 'app.html'

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, NavParams } from 'ionic-angular';
 
-import { MyTeams, Teams} from '../pages'
+import { MyTeams, Teams} from '../pages';
+import { EliteApi } from '../../shared/shared';
 
 
 @IonicPage()
@@ -11,15 +12,34 @@ import { MyTeams, Teams} from '../pages'
 })
 export class Tournaments {
 
-  constructor(private navCtrl: NavController, public navParams: NavParams) {
+  tournaments : any;
+
+  constructor(private navCtrl: NavController, public navParams: NavParams,
+              private loadCtrl: LoadingController,
+              private eliteApi: EliteApi) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tournaments');
+    console.log('ionViewDidLoad Tournaments 2');
+
+    let loader = this.loadCtrl.create({
+      content: 'Getting tournaments...'
+      // spinner: 'dots'
+    });
+
+    loader.present().then(() => {
+      this.eliteApi.getTournaments().then(data => {
+        this.tournaments = data;
+        loader.dismiss();
+      });
+    })
+
+
+
   }
 
-  itemTapped() {
-    this.navCtrl.push(Teams);
+  itemTapped($event, tourney) {
+    this.navCtrl.push(Teams, tourney);
   }
 
 }
