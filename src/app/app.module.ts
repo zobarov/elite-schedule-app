@@ -7,8 +7,6 @@ import { HttpModule } from '@angular/http';
 import { EliteApi } from '../shared/elite-api.service';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { MyTeams } from '../pages/my-teams/my-teams';
 import { Tournaments } from '../pages/tournaments/tournaments';
@@ -22,11 +20,12 @@ import { Standings } from '../pages/standings/standings';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { IonicStorageModule } from '@ionic/storage';
+import { Storage } from '@ionic/storage';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage,
     MyTeams,
     Tournaments,
     TeamDetail,
@@ -39,13 +38,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
     MyTeams,
     Tournaments,
     TeamDetail,

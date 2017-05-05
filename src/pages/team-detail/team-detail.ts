@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 import * as _ from 'lodash';
-
 import  { EliteApi } from '../../shared/shared';
-
 import { Game } from '../pages';
 
 @IonicPage()
@@ -15,6 +12,7 @@ import { Game } from '../pages';
 export class TeamDetail {
   games: any[];
   team : any;
+  teamStanding: any;
   private tourneyData: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -41,6 +39,8 @@ export class TeamDetail {
                       homeAway: (isTeam1 ? "vs" : "at")
                     }
                   }).value();
+
+    this.teamStanding = _.find(this.tourneyData.teamStanding, {'teamId': this.team.id});
   }
 
   getScoredDisplay(isTeam1, team1Score, team2Score) {
