@@ -13,7 +13,7 @@ export class MyTeams {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  ionViewLoaded() {
     console.log('ionViewDidLoad MyTeams');
   }
 

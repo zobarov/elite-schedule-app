@@ -25,8 +25,11 @@ export class EliteApi {
     .map((response: Response) => {
       this.currentTourney = response.json();
       return this.currentTourney;
-    })
+    });
+  }
 
+  getCurrentTourney() {
+    return this.currentTourney;
   }
 
 }
